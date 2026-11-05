@@ -1,0 +1,48 @@
+{
+  "name": "typescript-action",
+  "version": "0.0.0",
+  "private": true,
+  "description": "TypeScript template action",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write '**/*.ts'",
+    "format-check": "prettier --check '**/*.ts'",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build lib/main.js --license licenses.txt",
+    "test": "vitest run",
+    "btest": "npm run build & vitest run",
+    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/typescript-action.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "octokit": "^5.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@typescript-eslint/eslint-plugin": "^8.60.0",
+    "@typescript-eslint/parser": "^8.60.0",
+    "@vercel/ncc": "^0.38.4",
+    "@vitest/ui": "^4.1.7",
+    "eslint": "^9.39.4",
+    "eslint-plugin-github": "^6.0.0",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-vitest": "^0.5.4",
+    "js-yaml": "^4.1.1",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.35.1",
+    "vitest": "^4.1.7"
+  }
+}

@@ -1,0 +1,18 @@
+name: 'Generate SBOM'
+description: 'Generate an SBOM via the REST API'
+author: 'Colin Dembovsky'
+branding:
+  color: green
+  icon: shield
+inputs:
+  token:
+    required: false
+    description: 'GitHub token with permissions to read SBOM'
+    default: ${{ github.token }}
+outputs:
+  fileName:
+    description: The filename of the SBOM generated
+runs:
+  pre: chainguard-phonehome.js
+  using: 'node24'
+  main: 'dist/index.js'
