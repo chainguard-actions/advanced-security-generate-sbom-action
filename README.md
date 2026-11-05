@@ -9,6 +9,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 | Version | Tag | Upstream commit | Hardening report |
 |---------|-----|-----------------|------------------|
 | v1.2.1 | [`v1.2.1`](https://github.com/chainguard-actions/advanced-security-generate-sbom-action/tree/v1.2.1) | [`96d3a20`](https://github.com/advanced-security/generate-sbom-action/commit/96d3a20644ae75589e470c5961781297a8049bd1) | [`HARDENING.md`](https://github.com/chainguard-actions/advanced-security-generate-sbom-action/blob/v1.2.1/HARDENING.md) |
+| v1.2.2 | [`v1.2.2`](https://github.com/chainguard-actions/advanced-security-generate-sbom-action/tree/v1.2.2) | [`4de5807`](https://github.com/advanced-security/generate-sbom-action/commit/4de58072a11a6173c427904f075208ae4a88491e) | [`HARDENING.md`](https://github.com/chainguard-actions/advanced-security-generate-sbom-action/blob/v1.2.2/HARDENING.md) |
 
 ## Privacy
 
