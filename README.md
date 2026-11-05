@@ -1,14 +1,27 @@
-# advanced-security/generate-sbom-action
+<p align="center">
+  <a href="https://github.com/advanced-security/generate-sbom-action"><img alt="test status" src="https://github.com/advanced-security/generate-sbom-action/actions/workflows/test.yml/badge.svg"></a>
+</p>
 
-Generate an SBOM via the REST API
+# Generate SBOM Action
 
-Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/advanced-security/generate-sbom-action](https://github.com/advanced-security/generate-sbom-action).
+This action uses the REST API call to generate the SBOM for the repo (on the default branch). You can then use the `fileName` output to upload the file as an artifact. 
 
-## Versions
+## Usage
 
-| Version | Tag | Upstream commit | Hardening report |
-|---------|-----|-----------------|------------------|
-| v1.2.1 | [`v1.2.1`](https://github.com/chainguard-actions/advanced-security-generate-sbom-action/tree/v1.2.1) | [`96d3a20`](https://github.com/advanced-security/generate-sbom-action/commit/96d3a20644ae75589e470c5961781297a8049bd1) | [`HARDENING.md`](https://github.com/chainguard-actions/advanced-security-generate-sbom-action/blob/v1.2.1/HARDENING.md) |
+You can use the workflow as follows:
+
+```yaml
+gen-sbom:
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@v4
+  - uses: advanced-security/generate-sbom-action@v1
+    id: gensbom
+  - uses: actions/upload-artifact@v4
+    with:
+      name: sbom
+      path: ${{ steps.gensbom.outputs.fileName }}
+```
 
 ## Privacy
 
