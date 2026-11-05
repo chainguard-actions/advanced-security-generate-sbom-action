@@ -1,0 +1,1 @@
+# advanced-security-generate-sbom-action
